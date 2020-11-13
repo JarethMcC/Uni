@@ -1,10 +1,17 @@
 import turtle
+import random
+
+#colors is used later to in conjunction with random to get a color for the square
+#noSquares takes input for how many squares the program should create
+colors = ['red', 'blue', 'green']
+noSquares = int(input('How many squares would you like to see?: ')))
 
 def main():
     turtle.hideturtle()
-    square(100, 0, 50, 'red')
-    square(-150, -100, 200, 'blue')
-    square(-200, 150, 75, 'green')
+    for i in range(noSquares):
+        square(random.randint(-200, 200), random.randint(-200, 200), random.randint(1, 200), random.choice(colors))
+        #square(random.randint(-200, 200), random.randint(-200, 200), random.randint(1, 200), random.choice(colors))
+        #square(random.randint(-200, 200), random.randint(-200, 200), random.randint(1, 200), random.choice(colors))
 
 # The square function draws a square. The x and y parameters
 # are the coordinates of the lower-left corner. The width
